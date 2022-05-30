@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IProduct } from './models/products';
+import { ProductsService } from './services/products.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'firebase-busines-web-site-width-admin-panel';
+  products$: Observable<IProduct[]> = this.productsService.getProduct();
+  constructor(private productsService: ProductsService) { }
 }

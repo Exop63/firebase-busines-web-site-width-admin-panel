@@ -1,0 +1,25 @@
+$border: 1px solid rgb(214, 214, 214);
+
+.table {
+    width: 100%;
+    border: $border;
+
+    tr {
+        border-top: $border;
+        min-height: 40px;
+    }
+
+    th {
+        cursor: pointer;
+    }
+
+    .bt-remove {
+        border: 1px solid rgb(129, 0, 0);
+        background-color: red;
+        color: white;
+        border-radius: 3px;
+        min-height: 25px;
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+}
